@@ -1,3 +1,7 @@
+body {
+  background-color: #deebf7;
+}
+
 p,
 h1,
 h2,
@@ -6,6 +10,64 @@ h4,
 h5,
 h6,
 a,
+tr,
 button {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  border: none !important;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 15px 35px 15px 35px;
+  font-weight: bold;
+  background-color: #2265e5;
+}
+
+button:hover {
+  background-color: #528af3;
+}
+
+.button-back {
+  border: none !important;
+  border-radius: 4px;
+  color: #000000;
+  padding: 15px 35px 15px 35px;
+  font-weight: bold;
+  background-color: #c2cee4;
+}
+
+.button-back:hover {
+  border: none !important;
+  border-radius: 4px;
+  color: #000000;
+  padding: 15px 35px 15px 35px;
+  font-weight: bold;
+  background-color: #adb4c2;
+}
+
+.grid {
+  align-items: center;
+  justify-content: center;
+}
+
+.title-area {
+  padding: 25px 0px 25px 0px;
+}
+
+.title-msg {
+  color: #252525;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.body {
+  padding: 10px;
+}
+
+.card {
+  padding: 20px 35px 20px 35px;
+  margin-bottom: 3px;
+  background-color: #ffffff;
+  border-radius: 5px;
 }

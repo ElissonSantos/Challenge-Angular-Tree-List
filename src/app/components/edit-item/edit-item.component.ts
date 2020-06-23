@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "edit-item",
@@ -6,9 +7,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./edit-item.component.css"],
 })
 export class EditItem implements OnInit {
-  constructor() {}
+  private title = "New Item";
 
-  ngOnInit() {
-    console.log("Iniciou");
+  constructor(private router: Router) {}
+
+  ngOnInit() {}
+
+  cancel() {
+    this.router.navigate(["home"]);
   }
 }

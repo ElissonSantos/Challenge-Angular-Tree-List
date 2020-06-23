@@ -1,4 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+
+import { ItensService } from "../services/itens.service";
 
 @Component({
   selector: "tree-list",
@@ -6,9 +9,14 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./tree-list.component.css"],
 })
 export class TreeList implements OnInit {
-  constructor() {}
+  private itens = [];
+
+  constructor(private router: Router) {}
+
+  editItem() {
+    this.router.navigate(["edititem"]);
+  }
 
   ngOnInit() {
-    console.log("Iniciou");
   }
 }

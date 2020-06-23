@@ -1,3 +1,52 @@
-<img
-  src="https://raw.githubusercontent.com/Navegg/navegg-frontend-challenge/master/new-item.png"
-/>
+<div class="grid">
+  <div class="title-area">
+    <div class="title-card">
+      <h1>Front-End Test /</h1>
+      <h1 class="title-text">{{ title }}</h1>
+    </div>
+    <p class="title-msg">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eleifend
+      dapibus enim vel egestas.
+    </p>
+  </div>
+
+  <div class="body">
+    <div class="card">
+      <h2>Create Item</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+      <div class="form">
+        <div class="name">
+          <p>Name:</p>
+          <div class="input-area">
+            <input class="input" placeholder="Type the item name" />
+          </div>
+        </div>
+
+        <div class="parent">
+          <p>Parent:</p>
+          <div class="input-area">
+            <select name="parent" class="input">
+              <option>Select a parent item</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="description">
+        <p>Description:</p>
+        <textarea class="input" name="description" rows="4"> </textarea>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="buttons">
+        <button (click)="cancel()" class="button-back">Back to list</button>
+        <button>Create new item</button>
+      </div>
+    </div>
+  </div>
+</div>
