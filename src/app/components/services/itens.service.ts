@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Item } from "src/models/item.model";
 
 @Injectable()
 export class ItensService {
@@ -116,6 +117,8 @@ export class ItensService {
         name: "Segments tree",
       },
     ];
+
+    localStorage.setItem("channels", JSON.stringify(values));
 
     return values;
   }

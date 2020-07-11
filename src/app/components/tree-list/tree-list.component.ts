@@ -18,5 +18,7 @@ export class TreeList implements OnInit {
   }
 
   ngOnInit() {
+    const channels = localStorage.getItem("channels");
+    this.itens = JSON.parse(channels);
   }
 }

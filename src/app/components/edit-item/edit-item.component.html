@@ -19,18 +19,22 @@
         <div class="name">
           <p>Name:</p>
           <div class="input-area">
-            <input class="input" placeholder="Type the item name" />
+            <input
+              [(ngModel)]="name"
+              class="input"
+              placeholder="Type the item name"
+            />
           </div>
         </div>
 
         <div class="parent">
           <p>Parent:</p>
           <div class="input-area">
-            <select name="parent" class="input">
-              <option>Select a parent item</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+            <select [(ngModel)]="parent" class="input">
+              <option value="" [disabled]="true">Select a parent item</option>
+              <option *ngFor="let item of itens" [ngValue]="item.id">{{
+                item.name
+              }}</option>
             </select>
           </div>
         </div>
@@ -38,14 +42,14 @@
 
       <div class="description">
         <p>Description:</p>
-        <textarea class="input" name="description" rows="4"> </textarea>
+        <textarea [(ngModel)]="description" class="input" rows="4"> </textarea>
       </div>
     </div>
 
     <div class="card">
       <div class="buttons">
         <button (click)="cancel()" class="button-back">Back to list</button>
-        <button>Create new item</button>
+        <button (click)="save()">Create new item</button>
       </div>
     </div>
   </div>
